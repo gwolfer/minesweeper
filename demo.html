@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>G. Wolfer - Minesweeper</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">        
+		
+		<!-- Bootstrap -->
+		<link rel="stylesheet" href="app/components/bootstrap/docs/assets/css/bootstrap.css">
+		
+		<!-- Minesweeper -->
+		<link rel="stylesheet" href="app/minesweeper.css">
+
+    </head>
+    <body data-ng-app="app">
+		
+		<!-- Example -->
+		<div>
+			<h1 style="text-align: center;">G. Wolfer's Minesweeper</h1>
+			<div data-ng-minesweeper data-default-level="'medium'"></div>
+		</div>
+		
+		
+        <!-- Components -->
+        <script type="text/javascript" src="app/components/lazy.js/lazy.js"></script>        
+        <script type="text/javascript" src="app/components/angular/angular.js"></script>
+        <script type="text/javascript" src="app/components/angular-bootstrap/ui-bootstrap-tpls.js"></script>        
+        <script type="text/javascript" src="app/components/angular-translate/angular-translate.js"></script>
+		
+		<!-- Minesweeper -->
+		<script type="text/javascript" src="app/minesweeper.js"></script>
+	
+		<!-- Application -->
+		<script type="text/javascript">
+			
+			window.app = angular.module('app', ['ui.bootstrap', 'wolfer.minesweeper']);
+			
+			// Setting up translation
+			window.app.config(
+				function ($translateProvider) {
+					$translateProvider.translations('en_US', {
+						"minesweeper" : {
+							"BEGINNER" : "Beginner",
+							"INTERMEDIATE": "Intermediate",
+							"EXPERT": "Expert",
+							"NEW": "New game"
+						},
+					});
+					$translateProvider.preferredLanguage('en_US');
+				}
+			);
+			
+		</script>
+		
+    </body>
+</html>
