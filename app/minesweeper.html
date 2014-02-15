@@ -1,0 +1,49 @@
+<div class="minesweeper" data-ng-init="init()">
+
+	<div class="center">
+		<div class="btn-group">
+			<button type="button" class="btn" data-ng-model="level" data-btn-radio="'beginner'">{{'minesweeper.BEGINNER' | translate}}</button>
+			<button type="button" class="btn" data-ng-model="level" data-btn-radio="'medium'">{{'minesweeper.INTERMEDIATE' | translate}}</button>
+			<button type="button" class="btn" data-ng-model="level" data-btn-radio="'expert'">{{'minesweeper.EXPERT' | translate}}</button>
+		</div>
+		<div class="btn-group">
+			<button type="button" class="btn btn-success" data-ng-click="init()"><span class="icon-repeat"></span> {{'minesweeper.NEW' | translate}}</button>
+		</div>
+	</div>
+    
+    <div class="center">
+		<div class="input-prepend">
+			<span class="add-on"><i class="icon-flag"></i></span>
+			<span class="input uneditable-input minesweeper-input">{{grid.flaggedCount()}}</span>
+		</div>
+		<div class="input-prepend">
+			<span class="add-on"><i class="icon-asterisk"></i></span>
+			<span class="input uneditable-input minesweeper-input">{{grid.mineCount()}}</span>
+		</div>    
+		<div class="input-prepend">
+			<span class="add-on"><i class="icon-eye-open"></i></span>
+			<span class="input uneditable-input minesweeper-input">{{grid.unveiledCount()}}</span>
+		</div> 
+		<div class="input-prepend">
+			<span class="add-on"><i class="icon-time"></i></span>
+			<span class="input uneditable-input minesweeper-input">{{grid.time()}}</span>
+		</div> 
+	</div>
+
+	<div>
+		<table class="center">
+			<tr data-ng-repeat="i in grid.rows() track by $index">
+				<td data-ng-repeat="j in grid.cols() track by $index">
+					<button data-ng-hide="grid.cell(i, j).unveiled && grid.cell(i, j).value == 0" 
+							data-ng-click="grid.play(i, j)" 
+							data-ng-right-click="grid.flag(i, j)"
+							class="btn minesweeper-cell {{grid.cell(i, j) | buttonClass}}">
+						<span data-ng-hide class="minesweeper-value {{grid.cell(i, j) | cellClass}}">
+							{{grid.cell(i, j) | cellDisplay}}
+						</span>
+					</button>
+				</td>
+			</tr>
+		</table>
+	</div>
+</div>

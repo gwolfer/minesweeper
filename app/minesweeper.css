@@ -1,0 +1,68 @@
+.minesweeper .center { 
+	text-align: center;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.minesweeper .btn-group{
+	margin-bottom: 16px;
+}
+
+.minesweeper .minesweeper-input {
+	width: 30px;
+	text-align: center;
+}
+
+.minesweeper tr td{
+	height: 32px;
+	padding: 0;
+	margin: 0;
+	vertical-align: middle;
+}
+
+.minesweeper td{
+	width: 32px;
+}
+
+.minesweeper button.minesweeper-cell {
+	width: 32px;
+	height: 32px;
+	padding: 0;
+}
+
+.minesweeper span.minesweeper-value {
+	font-weight: bold;
+	font-size: 1.5em;
+}
+
+.minesweeper span.minesweeper-value.minesweeper-value-8 {
+	color: #000000;
+}
+
+.minesweeper span.minesweeper-value.minesweeper-value-7 {
+	color: #8B6914;
+}
+
+.minesweeper span.minesweeper-value.minesweeper-value-6 {
+	color: #A52A2A;
+}
+
+.minesweeper span.minesweeper-value.minesweeper-value-5 {
+	color: #A020F0;
+}
+
+.minesweeper span.minesweeper-value.minesweeper-value-4 {
+	color: #FFA500;
+}
+
+.minesweeper span.minesweeper-value.minesweeper-value-3 {
+	color: #FF0000;
+}
+
+.minesweeper span.minesweeper-value.minesweeper-value-2 {
+	color: #23731E;
+}
+
+.minesweeper span.minesweeper-value.minesweeper-value-1 {
+	color: #0000FF;
+}

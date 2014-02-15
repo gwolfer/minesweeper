@@ -1,0 +1,15 @@
+{
+  "name": "minesweeper",
+  "version": "0.1.0",
+  "main": "./app/minesweeper.js",
+  "dependencies": {
+    "bootstrap": "2.3",
+    "angular": "1.2.4",
+    "angular-bootstrap": "~0.7.0",    
+    "angular-translate": "1.1.1",
+    "lazy.js": "latest"
+  },
+  "resolutions": {
+    "angular": "1.2.4"
+  }
+}
