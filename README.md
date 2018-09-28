@@ -3,7 +3,7 @@ G. Wolfer's Minesweeper
 
 ## Demo
 
-Live demo at http://web.dagama.org/public/#!/minesweeper
+Live demo at http://dagama.org/minesweeper/
 
 ## Installation
 
